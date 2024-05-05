@@ -1,27 +1,27 @@
 import './App.css';
+import Navbar from "./modules/navbar.jsx";
+import Home from './pages/Home';
+import Retailers from './pages/Retailers';
+import Service from './pages/Service';
+import Store from './pages/Store';
+import Support from './pages/Support';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+      <Navbar></Navbar>
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Navbar />}>
+          <Route index element={<Home />} />
+          <Route path="retailer" element={<Retailers/>} />
+          <Route path="service" element={<Service />} />
+          <Route path="store" element={<Store />} />
+          <Route path="support" element={<Support />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
     </div>
   );
 }
