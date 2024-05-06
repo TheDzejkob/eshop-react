@@ -44,4 +44,108 @@
   font-family:Georgia, 'Times New Roman', Times, serif;
   margin-bottom: 0.5rem;
 }
+.container{
+  margin-top: 5vh;
 
+}
+.card{
+  border: none;
+}
+.card-title{
+  font-size: xxx-large;
+}
+.store-nadpis{
+  font-size: xx-large;
+  font-weight: bolder;
+  font-family: HelveticaNeueLTW05-75Bold, Helvetica Neue, -apple-system, Open Sans, Arial, sans-serif;
+
+}
+.card-text{
+  font-weight: bold;
+}
+.product-page {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 15px;
+}
+
+.image-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-column img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.info-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 5px 0;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}

@@ -1,45 +1,56 @@
-import '../App.css';
 
-function navbar() {
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useCart } from './CartContext';
+
+function Navbar() {
+  const { cartItems } = useCart();
+
   return (
     <div className="navbar">
-     <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
-     <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Subaru_logo.svg/1024px-Subaru_logo.svg.png" width="200" height="30" class="d-inline-block align-top" alt="Bootstrap"/>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light w-100">
+        <Link to="/" className="navbar-brand">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Subaru_logo.svg/1024px-Subaru_logo.svg.png"
+            width="200"
+            height="30"
+            className="d-inline-block align-top"
+            alt="Subaru"
+          />
+        </Link>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Store</a>
-      </li>
-
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Service</a>
-      </li>
-
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Retailers</a>
-      </li>
-
-      <li class="nav-item active">
-        <a class="nav-link disabled" href="#">Support</a>
-      </li>
-
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
+              <Link to="/store" className="nav-link">
+                Store
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/service" className="nav-link">
+                Service
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/retailers" className="nav-link">
+                Retailers
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/support" className="nav-link">
+                Support
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/cart" className="nav-link">
+                Cart ({cartItems.length})
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
   );
 }
 
-export default navbar;
+export default Navbar;

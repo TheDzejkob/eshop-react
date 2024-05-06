@@ -1,4 +1,5 @@
 import '../App.css';
+import "../App.jsx"
 
 function Carousal() {
   return (
@@ -25,7 +26,7 @@ function Carousal() {
               <h4 className="text-left carousal-text-nadpis">Outback</h4>
               <h5 className="text-left carousel-text-nazev"  >Limited-time offers<br/> on the 2024 Outback.</h5>
               <p className="text-left carousel-text-obsah" >Get great offers on select new 2024 Outback<br/> models now through April 30, 2024.</p>
-              <p className="text-left carousel-text-obsah" ><button type="button" className="btn btn-primary mt-3 carousel-button">Learn More</button></p>
+              <p className="text-left carousel-text-obsah" ><button  type="button" className="btn btn-primary mt-3 carousel-button">Learn More</button></p>
             </div>
           </div>
           <div className="carousel-item">
