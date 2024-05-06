@@ -5,6 +5,17 @@ import { useCart } from '../../modules/CartContext';
 const Legacy = () => {
   const { addToCart } = useCart();
 
+  const handleAddToCart = () => {
+    addToCart({
+      id: 7,
+      name: "2024 Legacy",
+      price: 24895,
+      image: 'https://s7d1.scene7.com/is/image/scom/ASC_default_nav-5?$400w$',
+      vehicleType: 'Cars',
+    });
+  };
+
+
   return (
     <div className="Legacy">
       <div className="container">
@@ -31,7 +42,7 @@ const Legacy = () => {
             </ul>
             <button type="button" className="btn btn-lg btn-primary" disabled>View All Base Features</button>
             <button type="button" className="btn btn-lg btn-primary" disabled>Compare the 5 Legacy Trims</button>
-            <button type="button" className="btn btn-primary btn-lg">Add to cart</button>
+            <button className="btn btn-primary" onClick={handleAddToCart}>Add to cart</button>
           </div>
         </div>
       </div>

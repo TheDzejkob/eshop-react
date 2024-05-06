@@ -5,6 +5,16 @@ import { useCart } from '../../modules/CartContext';
 const Solterra = () => {
   const { addToCart } = useCart();
 
+  const handleAddToCart = () => {
+    addToCart({
+      id: 5,
+      name: "2024 Solterra",
+      price: 44995,
+      image: 'https://s7d1.scene7.com/is/image/scom/ASC_default_nav-5?$400w$',
+      vehicleType: 'Cars',
+    });
+  };
+
   return (
     <div className="Solterra">
       <div className="container">
@@ -31,7 +41,7 @@ const Solterra = () => {
             </ul>
             <button type="button" className="btn btn-lg btn-primary" disabled>View All Premium Features</button>
             <button type="button" className="btn btn-lg btn-primary" disabled>Compare the 3 Solterra Trims</button>
-            <button type="button" className="btn btn-primary btn-lg">Add to cart</button>
+            <button className="btn btn-primary" onClick={handleAddToCart}>Add to cart</button>
           </div>
         </div>
       </div>

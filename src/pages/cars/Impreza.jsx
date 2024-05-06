@@ -5,6 +5,16 @@ import { useCart } from '../../modules/CartContext';
 const Impreza = () => {
   const { addToCart } = useCart();
 
+  const handleAddToCart = () => {
+    addToCart({
+      id: 6,
+      name: "2024 impreza",
+      price: 22995,
+      image: 'https://s7d1.scene7.com/is/image/scom/ASC_default_nav-5?$400w$',
+      vehicleType: 'Cars',
+    });
+  };
+
   return (
     <div className="Impreza">
       <div className="container">
@@ -31,7 +41,7 @@ const Impreza = () => {
             </ul>
             <button type="button" className="btn btn-lg btn-primary" disabled>View All Base Features</button>
             <button type="button" className="btn btn-lg btn-primary" disabled>Compare the 3 Impreza Trims</button>
-            <button type="button" className="btn btn-primary btn-lg">Add to cart</button>
+            <button className="btn btn-primary" onClick={handleAddToCart}>Add to cart</button>
           </div>
         </div>
       </div>
